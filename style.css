@@ -1,10 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
+
+/* Base styles for desktop already exist */
+
+@media (max-width: 600px) {
+  /* Adjust padding */
+  .coding-profiles {
+    padding: 20px;
   }
-  .container {
+
+  /* Stack profile cards vertically instead of horizontally */
+  .profiles-container {
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Make profile cards full width or nearly full width */
+  .profile-card {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  /* Adjust font sizes to fit smaller screens */
+  .coding-profiles h2 {
+    font-size: 3rem;
+  }
+
+  .profile-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .profile-card i {
+    font-size: 3rem;
   }
 }
 
@@ -495,3 +523,111 @@ section {
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
+/* Wrapper centers the entire section vertically and horizontally */
+.coding-profiles-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* Set background to black */
+  padding: 2rem;
+}
+
+/* Inner section layout */
+.coding-profiles {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Heading styling */
+.coding-profiles h2 {
+  font-size: 4.5rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Profile cards layout */
+.profiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual profile card */
+.profile-card {
+  background: var(--bg-color);
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 0 15px rgba(234, 88, 12, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.profile-card i {
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.profile-card h3 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.profile-card .btn {
+  margin-top: 10px;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background: var(--main-color);
+  border-radius: 25px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.profile-card .btn:hover {
+  background: #ff1d15;
+}
+.footer {
+  background-color:black;
+  color: #fff;
+  padding: 60px 0; /* Increased top and bottom padding */
+  text-align: center;
+  margin-top: 50px;
+  min-height: 150px; /* Optional: ensures a minimum height */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-socials a {
+  color: #fff;
+  margin: 0 15px; /* Increased spacing between icons */
+  font-size: 40px; /* Larger icons */
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00bcd4;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
